@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesan Hasil Nilai</title>
+    <script>
+        function tampilkanPesan() {
+            var skor = parseFloat(document.getElementById("skor").value);
+            var pesan = '';
+
+            if (skor >= 80) {
+                pesan = 'SANGAT MEMUASKAN';
+            } else if (skor >= 60 && skor < 80) {
+                pesan = 'MEMUASKAN';
+            } else {
+                pesan = 'JANGAN MENYERAH, COBA LAGI!';
+            }
+
+            document.getElementById("hasil").innerHTML = "Hasil: " + pesan;
+        }
+    </script>
+</head>
+<body>
+    <h1>Pesan Hasil Nilai</h1>
+    <p>Masukkan skor untuk mendapatkan pesan hasil:</p>
+
+    <label for="skor">Skor: </label>
+    <input type="text" id="skor" placeholder="Skor"><br>
+
+    <button onclick="tampilkanPesan()">Tampilkan Pesan</button>
+
+    <p id="hasil"></p>
+</body>
+</html>

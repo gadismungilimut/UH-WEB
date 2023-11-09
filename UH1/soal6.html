@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Identifikasi Smartphone</title>
+</head>
+<body>
+    <h1>Cek Smartphone</h1>
+    <p>Masukkan resolusi agar tahu jenis fitur smartphone:</p>
+
+    <label for="inputText">Masukkan Fitur Smartphone:</label>
+    <input type="text" id="inputText" oninput="checkFeature   ()">
+    <p id="output"></p>
+
+    <script>
+        function checkFeature() {
+            var inputText = document.getElementById("inputText").value;
+            var output = document.getElementById("output");
+
+            if (inputText === "10MP") {
+                output.textContent = "Ini adalah fitur kamera smartphone.";
+            } else if (inputText === "128GB") {
+                output.textContent = "Ini adalah fitur memori smartphone.";
+            } else {
+                output.textContent = "Fitur tidak dikenali.";
+            }
+        }
+    </script>
+</body>
+</html>

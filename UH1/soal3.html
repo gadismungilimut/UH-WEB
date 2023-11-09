@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jenis Seragam Harian</title>
+    <script>
+        function tampilkanJenisSeragam() {
+            var hari = document.getElementById("hari").value;
+            var jenisSeragam = '';
+
+            switch (hari.toLowerCase()) {
+                case 'senin':
+                    jenisSeragam = 'Seragam Osis';
+                    break;
+                case 'selasa':
+                    jenisSeragam = 'Seragam Identitas';
+                    break;
+                case 'rabu':
+                    jenisSeragam = 'Seragam Batik TS & Seragam Olah Raga';
+                    break;
+                case 'kamis':
+                    jenisSeragam = 'Seragam Praktek RPL';
+                    break;
+                case 'jumat':
+                    jenisSeragam = 'Seragam Pramuka';
+                    break;
+                default:
+                    jenisSeragam = 'Hari tidak valid';
+            }
+
+            document.getElementById("hasil").innerHTML = "Hari " + hari + ": " + jenisSeragam;
+        }
+    </script>
+</head>
+<body>
+    <h1>Seragam Harian XI PPLG 7</h1>
+    <p>Temen-temen jangan sampai salah seragam ya! Masukkan hari untuk mengetahui jenis seragam yang harus dipakai:</p>
+
+    <label for="hari">Hari: </label>
+    <input type="text" id="hari" placeholder="Hari"><br>
+
+    <button onclick="tampilkanJenisSeragam()">Tampilkan Jenis Seragam</button>
+
+    <p id="hasil"></p>
+</body>
+</html>
